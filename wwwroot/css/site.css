@@ -1,0 +1,42 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+#newForm{
+  display: flex;
+  margin-top: 1rem;
+}
+
+#mainbody {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dishes {
+  display: flex;
+  gap: 1rem;
+}
+
+h1, h5, #line {
+  text-align: center;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-around;
+}

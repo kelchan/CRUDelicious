@@ -1,0 +1,46 @@
+@model Dish
+
+<h1>Edit @Model.Name</h1>
+
+<a href="/">Home</a>
+
+<form asp-controller="Dish" asp-action="UpdateDish" asp-route-updatedDishId="@Model.DishId" method="post" id="newForm">
+
+
+    <div id="left">
+    @* <label asp-for="DishId"></label> *@
+        <div class="input">
+            <label asp-for="Chef"></label>
+            <span asp-validation-for="Chef"></span>
+            <input type="text" asp-for="Chef">
+        </div>
+        <div class="input">
+            <label asp-for="Name"></label>
+            <span asp-validation-for="Name"></span>
+            <input type="text" asp-for="Name">
+        </div>
+        <div class="input">
+            <label asp-for="Calories"></label>
+            <span asp-validation-for="Calories"></span>
+            <input type="number" asp-for="Calories">
+        </div>
+    </div>
+
+    <div id="mid">
+        <div class="input">
+            <label asp-for="Tastiness"></label>
+            <span asp-validation-for="Tastiness"></span>
+            <input type="number" asp-for="Tastiness">
+        </div>
+    </div>
+
+    <div id="right">
+        <div class="input">
+            <label asp-for="Description"></label>
+            <span asp-validation-for="Description"></span>
+            <textarea asp-for="Description" cols="30" rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+
+</form>
